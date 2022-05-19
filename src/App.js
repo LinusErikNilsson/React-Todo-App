@@ -49,6 +49,7 @@ function App(props) {
 
 
   function toggleTaskCompleted(id) {
+    
     const updatedTasks = tasks.map(task => {
       if (id === task.id) {
         return { ...task, completed: !task.completed }
@@ -82,7 +83,14 @@ function App(props) {
     />
   ));
 
+  /*
+  function toggleTaskCompleted(id) {
+    console.log(tasks[0])
+  }
+  */
+
   const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+
   const headingText = `${taskList.length} ${tasksNoun} remaining`;
   const listHeadingRef = useRef(null);
   const prevTaskLength = usePrevious(tasks.length);
@@ -101,8 +109,7 @@ function App(props) {
       <div className="filters btn-group stack-exception">
         {filterList}
       </div>
-      <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
-        {headingText}
+      <h2 id="list-heading">{headingText}
       </h2>
       <ul
         role="list"
