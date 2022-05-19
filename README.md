@@ -2,7 +2,7 @@
 
 My first project in React.
 
-This is a simple Todo application in React, with the ability to create new tasks and delete the.
+This is a simple Todo application in React, with the ability to create new tasks and delete tasks.
 When the application launch, 3 pre-set tasks will be created.
 
 ##
