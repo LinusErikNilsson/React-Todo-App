@@ -8,8 +8,9 @@ function FilterButton(props) {
             aria-pressed={props.isPressed}
         >
             <span className="visually-hidden">Show </span>
-            <span>All </span>
+            <span>all </span>
             <span className="visually-hidden"> tasks</span>
+
         </button>
 
     );
