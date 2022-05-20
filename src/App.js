@@ -28,8 +28,10 @@ function App(props) {
 
 
   function addTask(name) {
+
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
+    console.log(newTask);
   }
 
   function deleteTask(id) {
@@ -49,7 +51,6 @@ function App(props) {
 
 
   function toggleTaskCompleted(id) {
-    console.log(tasks[0])
     
     const updatedTasks = tasks.map(task => {
       if (id === task.id) {
@@ -58,6 +59,7 @@ function App(props) {
       return task;
     });
     setTasks(updatedTasks);
+    console.log(updatedTasks)
   }
 
   const taskList = tasks
@@ -84,11 +86,7 @@ function App(props) {
     />
   ));
 
-  /*
-  function toggleTaskCompleted(id) {
-    console.log(tasks[0])
-  }
-  */
+
 
   const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
 
