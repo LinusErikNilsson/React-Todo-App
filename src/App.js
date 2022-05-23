@@ -34,6 +34,7 @@ function App(props) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
     console.log(newTask);
+    <TaskCounter />
 
   }
 
@@ -92,8 +93,8 @@ function App(props) {
 
 
   //const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
-
   //const headingText = `${taskList.length} ${tasksNoun} remaining`;
+
   const listHeadingRef = useRef(null);
   const prevTaskLength = usePrevious(tasks.length);
 
