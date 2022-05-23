@@ -10,8 +10,8 @@ function TaskCounter () {
     
     return (
         `${taskList.length} ${tasksNoun} remaining`
-        
-    )
+               
+    );
 
            
 
