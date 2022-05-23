@@ -1,9 +1,10 @@
 import * as React from 'react';
+import taskList from './App';
 
 const TaskCounterContext = React.createContext()
 
 
-function TaskCounter (prop) {
+function TaskCounter () {
     const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
     
     
@@ -14,3 +15,5 @@ function TaskCounter (prop) {
            
 
 }
+
+export default TaskCounter;
