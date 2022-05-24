@@ -97,8 +97,6 @@ export default function Todo(props) {
         }
     }, [wasEditing, isEditing]);
 
-    //console.log("main render");
-
     return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 
 }

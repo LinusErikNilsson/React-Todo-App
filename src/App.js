@@ -3,6 +3,9 @@ import Todo from "./components/todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
+import TaskCounterContext from "./taskcounter_context";
+import { render } from "@testing-library/react";
+
 
 function usePrevious(value) {
   const ref = useRef();
@@ -29,9 +32,10 @@ function App(props) {
 
   function addTask(name) {
 
-    const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
+    const newTask = { id: nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
     console.log(newTask);
+
   }
 
   function deleteTask(id) {
@@ -88,9 +92,9 @@ function App(props) {
 
 
 
-  const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+  //const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+  //const headingText = `${taskList.length} ${tasksNoun} remaining`;
 
-  const headingText = `${taskList.length} ${tasksNoun} remaining`;
   const listHeadingRef = useRef(null);
   const prevTaskLength = usePrevious(tasks.length);
 
@@ -108,7 +112,7 @@ function App(props) {
       <div className="filters btn-group stack-exception">
         {filterList}
       </div>
-      <h2 id="list-heading">{headingText}
+      <h2 id="list-heading"> <TaskCounterContext/>
       </h2>
       <ul
         role="list"
