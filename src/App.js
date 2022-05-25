@@ -5,6 +5,8 @@ import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
 import TaskCounterContext from "./taskcounter_context";
 import { render } from "@testing-library/react";
+import TaskCounter from "./taskcounter_context";
+import TestTaskListCounter from "./taskcounter_context";
 
 
 function usePrevious(value) {
@@ -35,7 +37,8 @@ function App(props) {
     const newTask = { id: nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
     console.log(newTask);
-
+    console.log(tasks);
+    
   }
 
   function deleteTask(id) {
@@ -112,7 +115,9 @@ function App(props) {
       <div className="filters btn-group stack-exception">
         {filterList}
       </div>
-      <h2 id="list-heading"> <TaskCounterContext/>
+      <h2 id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
+
+      
       </h2>
       <ul
         role="list"
