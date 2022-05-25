@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
 import { render } from "@testing-library/react";
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 
 
 function usePrevious(value) {
@@ -109,7 +110,9 @@ function App(props) {
 
   return (
     <div className="todoapp stack-large">
-      <h1>Todo List</h1>
+      <h1>Todo List
+        <PlaylistAddIcon></PlaylistAddIcon>
+      </h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         {filterList}
