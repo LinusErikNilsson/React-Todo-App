@@ -3,10 +3,8 @@ import Todo from "./components/todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
-import TaskCounterContext from "./taskcounter_context";
 import { render } from "@testing-library/react";
-import TaskCounter from "./taskcounter_context";
-import TestTaskListCounter from "./taskcounter_context";
+
 
 
 function usePrevious(value) {
