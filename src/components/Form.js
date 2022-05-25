@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import App from "../App";
 import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 
 function Form(props) {
@@ -32,9 +33,13 @@ function Form(props) {
                 value={name}
                 onChange={handleChange}
             />
-            <button type="submit" className="btn btn_primary btn_lg">
+            
+
+            <Button variant="contained"
+             type="submit" className="btn btn_primary btn_lg">
                 Add
-            </button>
+            </Button>
+            
         </form>
     );
 }
