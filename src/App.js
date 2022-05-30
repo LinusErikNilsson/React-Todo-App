@@ -93,7 +93,7 @@ function App(props) {
 
   return (
     <div className="todoapp stack-large">
-      <h1>Todo List
+      <h1 className="mainheader">Todo List
         <PlaylistAddIcon fontSize="verylarge"></PlaylistAddIcon>
       </h1>
       <Form addTask={addTask} />

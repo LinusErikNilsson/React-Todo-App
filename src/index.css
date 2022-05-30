@@ -5,13 +5,34 @@
   body {
     background-color: f5f5f5;
   }
+
+    .stack-large
+    {
+      flex: 0 0 env(viewport-segment-right 0 0);
+         margin-inline-end: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0)) ;
+
+   overflow-y: scroll;
+
+    }
+  }
+
+  .figure {
+    flex: 1;
+
+    margin: 0;
+    overflow: hidden
+  }
+
+  .figure img {
+    height: 100%;
+  }
   
-}
+
 
 @media (max-width: 540px) {
   body {
-
     background-color: green;
+    display: flex;
   }
 }
 
@@ -50,12 +71,12 @@ body {
   /*background-color: #f5f5f5; */
   color: #4d4d4d;
 }
-@media screen and (min-width: 620px) {
+/*@media screen and (min-width: 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
-}
+}*/
 /*END RESETS*/
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {
