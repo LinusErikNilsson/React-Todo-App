@@ -45,6 +45,7 @@ function Form(props) {
                 <TextField id="outlined-basic" label="New task:" variant="outlined" size="Large" />
 
                 <Button variant="contained"
+                color="success"
                 type="submit" className="btn btn_primary btn_lg">
                 Add
                 </Button>
