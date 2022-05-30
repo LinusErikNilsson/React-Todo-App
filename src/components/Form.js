@@ -27,7 +27,9 @@ function Form(props) {
                 </label>
             </h2>
 
-        
+            <div className="mid-div">
+
+
             <Box
                 component="text"
                 id="new-todo-input"
@@ -50,6 +52,9 @@ function Form(props) {
                 Add
                 </Button>
             </Box>
+            </div>
+
+        
 
             
         </form>
