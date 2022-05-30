@@ -91,23 +91,6 @@ function App(props) {
     />
   ));
 
-
-
-  //const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
-  //const headingText = `${taskList.length} ${tasksNoun} remaining`;
-
-  /*
-  const listHeadingRef = useRef(null);
-  const prevTaskLength = usePrevious(tasks.length);
-
-  useEffect(() => {
-    if (tasks.length - prevTaskLength === -1) {
-      listHeadingRef.current.focus();
-    }
-  }, [tasks.length, prevTaskLength]);
-  */
-
-
   return (
     <div className="todoapp stack-large">
       <h1>Todo List
