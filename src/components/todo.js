@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function usePrevious(value) {
     const ref = useRef();
@@ -69,23 +70,28 @@ export default function Todo(props) {
             </div>
 
             <div className="btn-group">
-                <button
+                <Button
+                    variant="contained"
+                    color="info"
                     type="button"
                     className="btn"
                     onClick={() => setEditing(true)}
                     ref={editButtonRef}
                 >
                     Edit <span className="visually-hidden">{props.name}</span>
-                </button>
+                </Button>
 
-                <button
+                <Button
+                    variant="contained"
+                    startIcon={<DeleteIcon/>}
+                    color="error"
                     type="button"
                     className="btn btn_danger"
                     onClick={() => props.deleteTask(props.id)}
                 >
                     Delete <span className="visually-hidden">{props.name}
                     </span>
-                </button>
+                </Button>
             </div>
         </div>
     );

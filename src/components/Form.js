@@ -42,7 +42,7 @@ function Form(props) {
                 onChange={handleChange}
                 >
                     
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                <TextField id="outlined-basic" label="New task:" variant="outlined" size="Large" />
 
                 <Button variant="contained"
                 type="submit" className="btn btn_primary btn_lg">
