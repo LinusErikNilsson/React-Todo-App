@@ -44,13 +44,15 @@ export default function Todo(props) {
                 />
             </div>
             <div className="btn-group">
-                <button
+                <Button
+                    variant="contained"
+                    color="warning"
                     type="button"
                     className="btn todo-cancel"
                     onClick={() => setEditing(false)}>
                     Cancel
                     <span className="visually-hidden">renaming {props.name}</span>
-                </button>
+                </Button>
 
             </div>
         </form>
