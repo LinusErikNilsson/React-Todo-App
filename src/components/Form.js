@@ -45,13 +45,13 @@ function Form(props) {
                 >
                     
                 <TextField id="outlined-basic" label="New task:" variant="outlined" size="Large" />
+            </Box>
 
                 <Button variant="contained"
                 color="success"
-                type="submit" className="btn btn_primary btn_lg">
+                type="submit" className="Addtask">
                 Add
                 </Button>
-            </Box>
             </div>
 
         

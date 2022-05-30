@@ -112,7 +112,15 @@ function App(props) {
         {taskList}
       </ul>
 
+          <figure class="figure">
+
+      <img src="bot-building-secure-app.png"
+      alt="Picture of a workshop, with a workbench on wheels, tools hanging on wall, fireextingusher on the floor beside the workbench"/>
+
+    </figure>
+
     </div>
+    
   );
 }
 

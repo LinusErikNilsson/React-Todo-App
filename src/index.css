@@ -15,18 +15,20 @@
 
     }
   }
-
+  
+  
   .figure {
     flex: 1;
 
     margin: 0;
-    overflow: hidden
+    overflow: hidden;
+  
   }
 
   .figure img {
-    height: 100%;
+    width: 100%;
+ 
   }
-  
 
 
 @media (max-width: 540px) {
@@ -71,12 +73,16 @@ body {
   /*background-color: #f5f5f5; */
   color: #4d4d4d;
 }
-/*@media screen and (min-width: 620px) {
+
+/*
+@media screen and (min-width: 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
-}*/
+}
+*/
+
 /*END RESETS*/
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {
@@ -96,8 +102,16 @@ body {
 .mid-div
 {
   display: flex;
-  justify-content: space-between 1rem;
+  width: 100%;
+  align-items: center;
+  text-align: center;
  
+}
+
+.addTask
+{
+  display: flex;
+  align-items: center;
 }
 
 .btn-group {
@@ -137,6 +151,8 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
+
+/*
 @media screen and (min-width: 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
@@ -145,6 +161,8 @@ body {
     margin-top: 2.8rem;
   }
 }
+*/
+
 .stack-exception {
   margin-top: 1.2rem;
 }
@@ -156,11 +174,16 @@ body {
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
+
+/*
 @media screen and (min-width: 550px) {
   .todoapp {
     padding: 4rem;
   }
 }
+*/
+
+
 .todoapp > * {
   max-width: 50rem;
   margin-left: auto;
@@ -197,11 +220,15 @@ display: flex;
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
+
+/*
 @media screen and (min-width: 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
 }
+*/
+
 .filters {
   width: 100%;
   margin: unset auto;
