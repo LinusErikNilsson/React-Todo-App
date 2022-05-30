@@ -1,3 +1,22 @@
+/* DS */
+
+@media (horizontal-viewport-segments: 2), (vertical-viewport-segments: 2)
+{
+  body {
+    background-color: f5f5f5;
+  }
+  
+}
+
+@media (max-width: 540px) {
+  body {
+
+    background-color: green;
+  }
+}
+
+
+
 /* RESETS */
 *,
 *::before,
@@ -28,7 +47,7 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 Arial, sans-serif;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5; */
   color: #4d4d4d;
 }
 @media screen and (min-width: 620px) {
@@ -46,7 +65,7 @@ body {
 
 .btn__primary {
   color: #fff;
-  background-color: #000;
+
   justify-content:space-around;
   display: flex;
   
@@ -110,7 +129,7 @@ body {
 }
 /* END GLOBAL STYLES */
 .todoapp {
-  background: #fff;
+ 
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
