@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import App from "../App";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 
 
 function Form(props) {
@@ -24,21 +26,30 @@ function Form(props) {
                     What needs to be done?
                 </label>
             </h2>
-            <input
-                type="text"
+
+        
+            <Box
+                component="text"
                 id="new-todo-input"
                 className="input input_lg"
                 name="text"
+                sx={{
+                    '& > :not(style' : {m: 1, witdth: '25ch'},
+                }}
+                noValidate
                 autoComplete="off"
                 value={name}
                 onChange={handleChange}
-            />
-            
+                >
+                    
+                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
 
-            <Button variant="contained"
-             type="submit" className="btn btn_primary btn_lg">
+                <Button variant="contained"
+                type="submit" className="btn btn_primary btn_lg">
                 Add
-            </Button>
+                </Button>
+            </Box>
+
             
         </form>
     );

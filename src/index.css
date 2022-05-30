@@ -66,11 +66,15 @@ body {
 .btn__filter {
   border-color: lightgrey;
 }
+*/
 .btn__primary {
   color: #fff;
   background-color: #000;
+  justify-content:space-around;
+  display: flex;
+  vertical-align:middle;
 }
-*/
+
 .btn-group {
   display: flex;
   justify-content: space-between;
