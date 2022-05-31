@@ -5,6 +5,8 @@ import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
 import { render } from "@testing-library/react";
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import "/path/to/modules/viewportsegments-polyfill/viewportsegments-polyfill.js";
+
 
 
 function usePrevious(value) {
