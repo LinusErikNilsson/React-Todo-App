@@ -49,7 +49,7 @@ function Form(props) {
 
                 <Button variant="contained"
                 color="success"
-                type="submit" className="Addtask">
+                type="submit" className="addbutton">
                 Add
                 </Button>
             </div>

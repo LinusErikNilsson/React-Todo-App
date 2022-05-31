@@ -100,17 +100,27 @@ function App(props) {
       <div className="filters btn-group stack-exception">
         {filterList}
       </div>
+
+
+      <div className="todoliststack">
+
+
+
       <h2 id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
 
       
       </h2>
+
+
+
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
-      >
+        >
         {taskList}
       </ul>
+          </div>
 
           <figure class="figure">
 

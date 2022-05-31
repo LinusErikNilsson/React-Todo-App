@@ -65,6 +65,8 @@ ul {
 input[type="text"] {
   border-radius: 0;
 }
+
+/* Styr mariginaler och bredd i "boxen"*/
 body {
   width: 100%;
   max-width: 68rem;
@@ -74,14 +76,14 @@ body {
   color: #4d4d4d;
 }
 
-/*
+
 @media screen and (min-width: 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
 }
-*/
+
 
 /*END RESETS*/
 /* GLOBAL STYLES */
@@ -101,17 +103,18 @@ body {
 
 .mid-div
 {
-  display: flex;
+  display: flexbox;
   width: 100%;
-  align-items: center;
+
   text-align: center;
+  padding: 1rem;
  
 }
 
-.addTask
+.addbutton
 {
-  display: flex;
-  align-items: center;
+ vertical-align: text-bottom;
+ 
 }
 
 .btn-group {
@@ -152,7 +155,7 @@ body {
   margin-top: 2.5rem;
 }
 
-/*
+
 @media screen and (min-width: 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
@@ -161,7 +164,7 @@ body {
     margin-top: 2.8rem;
   }
 }
-*/
+
 
 .stack-exception {
   margin-top: 1.2rem;
@@ -175,13 +178,13 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/*
+
 @media screen and (min-width: 550px) {
   .todoapp {
     padding: 4rem;
   }
 }
-*/
+
 
 
 .todoapp > * {
@@ -201,10 +204,12 @@ body {
 }
 .label__lg {
 display: flex;
+padding: 1rem;
 
 }
 .input__lg {
 
+padding: 1rem;
 display: flex;
 
 }
@@ -221,13 +226,13 @@ display: flex;
   margin-bottom: 1rem;
 }
 
-/*
+
 @media screen and (min-width: 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
 }
-*/
+
 
 .filters {
   width: 100%;
