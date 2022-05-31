@@ -5,7 +5,8 @@ import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
 import { render } from "@testing-library/react";
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import "/path/to/modules/viewportsegments-polyfill/viewportsegments-polyfill.js";
+
+
 
 
 
@@ -103,17 +104,11 @@ function App(props) {
         {filterList}
       </div>
 
-
       <div className="todoliststack">
-
-
 
       <h2 id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
 
-      
       </h2>
-
-
 
       <ul
         role="list"
@@ -122,18 +117,12 @@ function App(props) {
         >
         {taskList}
       </ul>
+    </div>
 
-      <figure class="figure">
-      <img src="bot-building-secure-app.png"
-      alt="purple round robot working to secure an app by adding settings."/>
-
-    </figure>
 
 
     </div>
 
-
-    </div>
     
   );
 }

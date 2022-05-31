@@ -1,21 +1,24 @@
 /* DS */
 
-@media (horizontal-viewport-segments: 2), (vertical-viewport-segments: 2)
+@media (horizontal-viewport-segments: 2)
 {
-  body {
-    background-color: f5f5f5;
+
+
+  .todostacklist {
+    width: env(viewport-segment-right 0 0);
+    height: 100vh;
   }
 
-    .stack-large
-    {
-      flex: 0 0 env(viewport-segment-right 0 0);
-         margin-inline-end: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0)) ;
+      
+  }
 
-   overflow-y: scroll;
-
+  @media (vertical-viewport-sgments: 2) {
+    .todoliststack{
+      width: 100vh;
+      height: env(viewport-segment-top 0 1);
     }
   }
-  
+
   
   .figure {
     flex: 1;
@@ -324,3 +327,8 @@ display: flex;
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+
+
+  
+  
+  
