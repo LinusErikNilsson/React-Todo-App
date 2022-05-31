@@ -36,7 +36,7 @@
 
 @media (max-width: 540px) {
   body {
-    background-color: green;
+    background-color: azure;
     display: flex;
   }
 }
@@ -90,6 +90,11 @@ body {
 
 /*END RESETS*/
 /* GLOBAL STYLES */
+
+.header-list-counter{
+  text-align: center;
+}
+
 .form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;

@@ -106,7 +106,7 @@ function App(props) {
 
       <div className="todoliststack">
 
-      <h2 id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
+      <h2 className="header-list-counter" id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
 
       </h2>
 
