@@ -31,22 +31,22 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
   const [filter, setFilter] = useState('All');
-
-
+  
+  
   function addTask(name) {
-
+    
     const newTask = { id: nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
     console.log(newTask);
     console.log(tasks);
     
   }
-
+  
   function deleteTask(id) {
     const remainingTasks = tasks.filter(task => id !== task.id);
     setTasks(remainingTasks);
   }
-
+  
   function editTask(id, newName) {
     const editedTaskList = tasks.map(task => {
       if (id === task.id) {
@@ -56,7 +56,7 @@ function App(props) {
     });
     setTasks(editedTaskList);
   }
-
+ 
 
   function toggleTaskCompleted(id) {
     
@@ -69,33 +69,37 @@ function App(props) {
     setTasks(updatedTasks);
     console.log(updatedTasks)
   }
-
+  
   const taskList = tasks
-    .filter(FILTER_MAP[filter])
-    .map(task => (
-      <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-        toggleTaskCompleted={toggleTaskCompleted}
+  .filter(FILTER_MAP[filter])
+  .map(task => (
+    <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+    toggleTaskCompleted={toggleTaskCompleted}
         deleteTask={deleteTask}
         editTask={editTask}
-      />
-    )
-    );
+        />
+        )
+        );
+        
+        const filterList = FILTER_NAMES.map(name => (
+          <FilterButton
+          key={name}
+          name={name}
+          isPressed={name === filter}
+          setFilter={setFilter}
+          />
+          ));
 
-  const filterList = FILTER_NAMES.map(name => (
-    <FilterButton
-      key={name}
-      name={name}
-      isPressed={name === filter}
-      setFilter={setFilter}
-    />
-  ));
-
-  return (
-    <div className="todoapp stack-large">
+          const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
+          const headingText = `${taskList.length} ${tasksNoun} remaining`
+        
+          
+          return (
+            <div className="todoapp stack-large">
       <h1 className="mainheader">Todo List
         <PlaylistAddIcon fontSize="verylarge"></PlaylistAddIcon>
       </h1>
@@ -106,9 +110,18 @@ function App(props) {
 
       <div className="todoliststack">
 
-      <h2 className="header-list-counter" id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
+      <h3 className="header-list-counter" id="list-heading"> 
+      
+      {headingText} {console.log(taskList.length)}
 
-      </h2>
+      </h3>
+
+      <h3 className="header-list-counter" id="list-heading"> 
+      
+      {tasks.filter(x => x === 'true').length} Tasks remaining todo
+      
+
+      </h3>
 
       <ul
         role="list"

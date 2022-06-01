@@ -12,7 +12,7 @@
       
   }
 
-  @media (vertical-viewport-sgments: 2) {
+  @media (vertical-viewport-segments: 2) {
     .todoliststack{
       width: 100vh;
       height: env(viewport-segment-top 0 1);
@@ -25,7 +25,7 @@
 
     margin: 0;
     overflow: hidden;
-  
+
   }
 
   .figure img {
@@ -93,6 +93,7 @@ body {
 
 .header-list-counter{
   text-align: center;
+
 }
 
 .form-group > input[type="text"] {
