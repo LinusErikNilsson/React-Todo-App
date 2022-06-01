@@ -5,10 +5,9 @@ import FilterButton from "./components/FilterButton";
 import { nanoid } from "nanoid";
 import { render } from "@testing-library/react";
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import { ThemeContext } from './context/themeContext';
-
-
-
+import { styled} from '@mui/material/styles';
+import { ThemeContext } from '../context/themeContext';
+import UseSwitchesCustom from '..component/themeswitcher.js';
 
 
 function usePrevious(value) {
@@ -120,9 +119,8 @@ function App(props) {
       </ul>
     </div>
 
-
-
     </div>
+
 
     
   );
