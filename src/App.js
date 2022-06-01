@@ -95,7 +95,11 @@ function App(props) {
           ));
 
           const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
-          const headingText = `${taskList.length} ${tasksNoun} remaining`
+          const headingText = `${taskList.length} ${tasksNoun} remaining`;
+
+          let filteredArr = taskList.filter((object) => {
+            if (object.Completed === true) return object.length;
+          })       
         
           
           return (
@@ -117,9 +121,9 @@ function App(props) {
       </h3>
 
       <h3 className="header-list-counter" id="list-heading"> 
-      
+      TEST
       {tasks.filter(x => x === 'true').length} Tasks remaining todo
-      
+      {filteredArr}    
 
       </h3>
 
