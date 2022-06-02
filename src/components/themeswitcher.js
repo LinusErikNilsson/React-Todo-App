@@ -1,3 +1,4 @@
+/*
 import * as React from 'react';
 import clsx from 'clsx';
 import { styled } from '@mui/system';
@@ -39,4 +40,4 @@ return (
 
 export default function UseSwitchesCustom() {
     return <MUISwitch defaultChecked />
-}
+}*/

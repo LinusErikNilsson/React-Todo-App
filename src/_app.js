@@ -1,3 +1,4 @@
+/*
 import { ThemeContext } from "@emotion/react";
 import React from "react";
 import { themeContext } from "./context/themeContext";
@@ -12,3 +13,4 @@ function MyApp({ Component, pageProps }) {
         </ThemeContext.Provider>
     );
 }
+*/

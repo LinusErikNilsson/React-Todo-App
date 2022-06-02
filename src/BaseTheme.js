@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import { ThemeContext } from './context/themeContext';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -22,3 +23,5 @@ export default function BaseTheme(props) {
   );
 
 }
+
+*/

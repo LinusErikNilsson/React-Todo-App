@@ -4,6 +4,7 @@ import './index.css';
 import App from "./BaseTheme";
 import reportWebVitals from './reportWebVitals';
 import { nanoid } from 'nanoid';
+import {CountContext} from './context/count_context.js'
 
 
 const DATA = [

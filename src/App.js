@@ -8,6 +8,7 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import { styled} from '@mui/material/styles';
 import { ThemeContext } from '../context/themeContext';
 import UseSwitchesCustom from '..component/themeswitcher.js';
+import {countContext} from '../context/count_Context.js'
 
 
 function usePrevious(value) {
@@ -108,6 +109,10 @@ function App(props) {
 
       <h2 className="header-list-counter" id="list-heading"> {taskList.length} tasks on the list {console.log(taskList.length)}
 
+      </h2>
+
+      <h2>
+        <countContext/>
       </h2>
 
       <ul
