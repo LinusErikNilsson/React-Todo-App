@@ -1,3 +1,4 @@
+/*
 import * as React from 'react'
 
 const CountContext = React.createContext()
@@ -32,3 +33,4 @@ function useCount() {
 }
 
 export {CountProvider, useCount}
+*/

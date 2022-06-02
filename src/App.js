@@ -9,6 +9,7 @@ import { styled} from '@mui/material/styles';
 import { ThemeContext } from '../context/themeContext';
 import UseSwitchesCustom from '..component/themeswitcher.js';
 import {countContext} from '../context/count_Context.js'
+import { FormControlLabel } from "@mui/material";
 
 
 function usePrevious(value) {
@@ -123,8 +124,15 @@ function App(props) {
         {taskList}
       </ul>
     </div>
+    <div>
+      <FormGroup>
+        <FormControlLabel control={<Switch defaultChecked />} label="label" />
+        <FormControlLabel disabled control={<Switch />} label="Disabled" />
+      </FormGroup>
+    </div>
 
     </div>
+
 
 
     
