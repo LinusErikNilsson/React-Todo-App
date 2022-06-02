@@ -6,10 +6,12 @@ import { nanoid } from "nanoid";
 import { render } from "@testing-library/react";
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import { styled} from '@mui/material/styles';
-import { ThemeContext } from '../context/themeContext';
-import UseSwitchesCustom from '..component/themeswitcher.js';
-import {countContext} from '../context/count_Context.js'
+import {ThemeContext, themes} from './context/theme-context';
+import {ThemedButton} from './themed-button.js';
+
+
 import { FormControlLabel } from "@mui/material";
+
 
 
 function usePrevious(value) {
@@ -28,6 +30,32 @@ const FILTER_MAP = {
 };
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
+
+function Toolbar(props) {
+  return (
+    <ThemedButton onClick={props.changeTheme}>
+      Change Theme
+    </ThemedButton>
+  );
+}
+
+class App extends React.Component {
+constructor(props) {
+  super.props;
+  this.state = {
+    theme: themes.light,
+  };
+
+  this.toggleTheme () => {
+    this.setState(state => ({
+      theme:
+      state.theme === themes.dark ? themes.light : themes.dark,
+    }))
+  }
+}
+
+}
+
 
 
 function App(props) {
@@ -125,10 +153,14 @@ function App(props) {
       </ul>
     </div>
     <div>
-      <FormGroup>
-        <FormControlLabel control={<Switch defaultChecked />} label="label" />
-        <FormControlLabel disabled control={<Switch />} label="Disabled" />
-      </FormGroup>
+      <page>
+        <ThemeContext.Provider value={this.state.theme}>
+          <Toolbar changeTheme={this.toggleTheme} />
+        </ThemeContext.Provider>
+        <section>
+          <ThemedButton />
+        </section>
+      </page>
     </div>
 
     </div>

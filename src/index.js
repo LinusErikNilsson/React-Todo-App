@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from "./BaseTheme";
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { nanoid } from 'nanoid';
-import {CountContext} from './context/count_context.js'
+
+import { dark } from '@mui/material/styles/createPalette';
 
 
 const DATA = [
@@ -18,6 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App tasks={DATA} />
+
     
   </React.StrictMode>
 )
