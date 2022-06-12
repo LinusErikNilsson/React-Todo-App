@@ -120,13 +120,6 @@ function App(props) {
 
       </h3>
 
-      <h3 className="header-list-counter" id="list-heading"> 
-      TEST
-      {tasks.filter(x => x === 'true').length} Tasks remaining todo
-      {filteredArr}    
-
-      </h3>
-
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
